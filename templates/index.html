@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Online Course Management System</h1>
+    </header>
+    <main>
+        <section id="add-course">
+            <h2>Add New Course</h2>
+            <form id="course-form">
+                <input type="text" id="course-title" placeholder="Course Title" required>
+                <input type="text" id="course-instructor" placeholder="Instructor" required>
+                <textarea id="course-description" placeholder="Description" required></textarea>
+                <button type="submit">Add Course</button>
+            </form>
+        </section>
+        <section id="course-list">
+            <h2>Available Courses</h2>
+            <div id="courses"></div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
